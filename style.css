@@ -282,6 +282,8 @@ nav.scrolled{padding:1rem 0;background:rgba(10,10,15,.88);backdrop-filter:blur(1
 .work-card-images img:hover{transform:scale(1.05)}
 .work-card-visit{display:block;padding:1rem 1.5rem;margin-top:auto;font-size:.88rem;font-weight:600;color:var(--primary-light);border-top:1px solid var(--border);transition:all .3s}
 .work-card-link:hover .work-card-visit{background:rgba(255,94,58,.05);color:var(--primary)}
+.work-showcase-link{display:inline-block;margin-top:1.2rem;padding:.6rem 1.2rem;font-size:.88rem;font-weight:600;color:var(--primary-light);border:1px solid var(--border);border-radius:var(--r-sm);text-decoration:none;transition:all .3s}
+.work-showcase-link:hover{background:rgba(255,94,58,.05);color:var(--primary);border-color:var(--primary)}
 
 /* Split Row */
 .split-row{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}

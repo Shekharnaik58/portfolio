@@ -57,30 +57,6 @@ document.querySelector('.mobile-menu-btn')?.addEventListener('click', function (
   this.setAttribute('aria-expanded', isOpen);
 });
 
-// Counter animation
-const cObs = new IntersectionObserver(entries => {
-  if (!entries[0].isIntersecting) return;
-  document.querySelectorAll('.hero-stat-num').forEach(el => {
-    const text = el.textContent;
-    const m = text.match(/(\d+)/);
-    if (!m) return;
-    const target = +m[1];
-    const prefix = text.substring(0, text.indexOf(m[1]));
-    const suffix = text.substring(text.indexOf(m[1]) + m[1].length);
-    let cur = 0;
-    const step = () => {
-      cur += Math.ceil((target - cur) / 12);
-      if (cur >= target) { el.textContent = prefix + target + suffix; return; }
-      el.textContent = prefix + cur + suffix;
-      requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-  });
-  cObs.disconnect();
-}, { threshold: 0.5 });
-const hs = document.querySelector('.hero-stats');
-if (hs) cObs.observe(hs);
-
 // Lightbox
 function createLightbox() {
   const lightbox = document.createElement('div');
